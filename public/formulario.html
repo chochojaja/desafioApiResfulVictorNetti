@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Format</title>
+</head>
+<body>
+    <script src="http://localhost:3000/api/productos/2 "></script>
+    <span></span> 
+    <h1>llenar Formulario</h1>
+    <ul>
+        
+    </ul>
+  
+    <script >
+        const template = Handlebars.compile(
+            '<li>title: {{nombre}}</li>'+
+            '<li>price:{{apellido}}</li>'+
+            ' <li>thumbnail{{edad}}</li>'         
+        ); 
+
+        const html = template({ 
+            title: 'calculadora',
+            price: '234,56',
+            thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png'
+
+        }); 
+        document.querySelector('ul').innerHTML = html; // inyecta el resultado en la vista
+    </script>
+</body>
